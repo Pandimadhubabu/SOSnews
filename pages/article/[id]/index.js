@@ -35,8 +35,8 @@ export const getStaticPaths = async () => {
 
   const articles = await res.json()
 
-  const ids = articles.map((article) => article.id)
-  const paths = ids.map((id) => ({ params: { id: id.toString() } }))
+  const ids = articles.map((article) => article.link)
+  const paths = ids.map((id) => ({ params: { id: link.toString() } }))
 
   return {
     paths,
