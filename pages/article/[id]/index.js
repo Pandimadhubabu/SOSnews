@@ -18,7 +18,7 @@ const article = ({ article }) => {
   )
 }
 
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const res = await fetch(`https://meta-data-mnr.vercel.app/api?url=${context.params.id}`)
 
   const article = await res.json()
