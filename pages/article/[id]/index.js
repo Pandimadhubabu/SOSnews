@@ -30,7 +30,7 @@ export const getServerSideProps = async (context) => {
   }
 }
 
-export const getStaticPaths = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch(`https://testgnj.vercel.app/api/news`)
 
   const articles = await res.json()
