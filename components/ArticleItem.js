@@ -3,7 +3,7 @@ import articleStyles from '../styles/Article.module.css'
 
 const ArticleItem = ({ article }) => {
   return (
-    <Link href={`/article/${article.id}`}>
+    <Link href={`/article/${article.link}`}>
       <a className={articleStyles.card}>
         <h3>{article.title} &rarr;</h3>
         <p>{article.excerpt}</p>
